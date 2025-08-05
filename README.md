@@ -15,7 +15,3 @@
 - R (4.0 or higher recommended)
 - R packages: `spacyr`, `stringr`, `quanteda`, `topics`, `stopwords`, `tibble`, `ggplot2`, `ggforce`, `crayon`, `text`, `reticulate`, `tidyverse`, `dplyr`
 - Python with spaCy and the `en_core_web_sm` model (for `spacyr` backend)
-
-## License
-
-MIT
