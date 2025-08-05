@@ -11,3 +11,9 @@ valence <- textPredict(
     word_embeddings = word_embeddings$texts,
     save_dir = "valence/"
 )
+
+gender <- textPredict(
+    model_info = "padmajabfrl/Gender-Classification",
+    word_embeddings = word_embeddings$texts,
+    save_dir = "results/"
+)
