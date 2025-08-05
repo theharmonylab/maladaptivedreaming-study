@@ -1,0 +1,8 @@
+data/*
+results/*
+plots/*
+*.png
+.RData
+*.rds
+*.Rhistory
+*.Rproj.user
