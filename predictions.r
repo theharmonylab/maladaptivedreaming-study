@@ -5,13 +5,14 @@ word_embeddings <- textEmbed(data,
 )
 T2 <- Sys.time()
 
-
+# Using a text LBAM model
 valence <- textPredict(
     model_info = "valence_facebook_mxbai23_eijsbroek2024",
     word_embeddings = word_embeddings$texts,
     save_dir = "valence/"
 )
 
+# Using a huggingface model
 gender <- textPredict(
     model_info = "padmajabfrl/Gender-Classification",
     word_embeddings = word_embeddings$texts,
