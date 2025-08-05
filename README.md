@@ -8,8 +8,6 @@
 
 - **imports.r**: Loads all required R packages and sets up the environment for the project, including memory options and initialization for text processing libraries. Source this file at the start of your R session to ensure all dependencies are loaded.
 
-- **README.md**: Project documentation and usage instructions.
-
 ## Typical Workflow
 
 ## Requirements
