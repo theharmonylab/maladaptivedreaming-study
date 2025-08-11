@@ -1,4 +1,4 @@
-# unstructured-dataset-comparison
+# Immersive vs Maladaptive Daydreaming Study
 
 ## Project Structure and File Descriptions
 
