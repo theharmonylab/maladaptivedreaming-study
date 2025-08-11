@@ -1,6 +1,7 @@
 data/*
 results/*
 plots/*
+valence/*
 *.png
 .RData
 *.rds
