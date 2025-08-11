@@ -6,7 +6,7 @@ read_custom_stopwords <- function(filepath) {
         character(0)
     }
 }
-custom_stopwords <- read_custom_stopwords("data/custom_stopwords.txt")
+custom_stopwords <- read_custom_stopwords("custom_stopwords.txt")
 stop_list <- c(custom_stopwords, stopwords::stopwords("en", source = "snowball"))
 
 #-------------------------------------------------
