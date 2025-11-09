@@ -21,9 +21,11 @@ theme_colors <- c(
     "Maladaptive Daydreaming" = "#E69F00" # Orange (colorblind-friendly)
 )
 
+
 lollipop <- ggplot(data, aes(x = Avg_Beta, y = Topic_Label, label = Avg_Beta, color = Subreddit)) +
     geom_segment(aes(x = 0, y = Topic_Label, xend = Avg_Beta, yend = Topic_Label, color = Subreddit)) +
     geom_point(aes(size = Prevalence), show.legend = TRUE) +
+    geom_hline(yintercept = 14 + 0.5, color = "grey60", linetype = "dashed", size = 0.4) +
     scale_color_manual(values = theme_colors) +
     theme_minimal(base_size = 10) +
     theme(
