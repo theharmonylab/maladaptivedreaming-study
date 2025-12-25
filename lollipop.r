@@ -5,7 +5,7 @@ library(forcats) # for factor ordering
 
 # Create dataset
 # Load dataset from CSV
-data <- read.csv("results/themes.csv")
+data <- read.csv("results/v3/themes.csv")
 # Reorder Topic so that "Immersive Daydreaming" topics appear first, then "Maladaptive Daydreaming"
 data <- data %>%
     arrange(Subreddit, Avg_Beta) %>%
@@ -25,7 +25,9 @@ theme_colors <- c(
 lollipop <- ggplot(data, aes(x = Avg_Beta, y = Topic_Label, label = Avg_Beta, color = Subreddit)) +
     geom_segment(aes(x = 0, y = Topic_Label, xend = Avg_Beta, yend = Topic_Label, color = Subreddit)) +
     geom_point(aes(size = Prevalence), show.legend = TRUE) +
-    geom_hline(yintercept = 14 + 0.5, color = "grey60", linetype = "dashed", size = 0.4) +
+    geom_hline(yintercept = 14 + 0.5, color = "grey50", linetype = "dashed", size = 0.4) +
+    annotate("text", x = -0.5, y = 14.5 + 0.4, label = "67 ID topics", hjust = 0, size = 2.5, color = "grey50") +
+    annotate("text", x = -0.5, y = 14.5 - 0.4, label = "96 MD topics", hjust = 0, size = 2.5, color = "grey50") +
     scale_color_manual(values = theme_colors) +
     theme_minimal(base_size = 10) +
     theme(
@@ -34,4 +36,4 @@ lollipop <- ggplot(data, aes(x = Avg_Beta, y = Topic_Label, label = Avg_Beta, co
     ) +
     labs(x = "Average Effect Size", y = "Theme (Number of Topics)", size = "Prevalence")
 
-ggsave("plots/lollipop.png", lollipop, width = 7, height = 5, dpi = 300, units = "in")
+ggsave("results/v3/lollipop.png", lollipop, width = 7, height = 5.5, dpi = 300, units = "in")
